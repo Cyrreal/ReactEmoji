@@ -1,58 +1,87 @@
 import s from "./FooterNavigation.module.css";
-import { EmojiType } from "../../App";
+import type { Emoji } from "../../App";
 
 type Props = {
+  maxIndex: number;
+  currentPage: number;
   startPage: number;
   endPage: number;
-  pageChoose: (PageNumber: number) => void;
   emojiPerPage: number;
-  allEmoji: EmojiType;
-  selectPerPage: (event: any) => void;
+  allEmoji: Emoji[];
+  pageChoose: (PageNumber: number) => void;
+  selectPerPage: (perPage: number) => void;
 };
 
 export function FooterNavigation({
+  maxIndex,
+  currentPage,
   startPage,
   endPage,
-  emojiPerPage,
-  allEmoji,
   pageChoose,
   selectPerPage,
 }: Props) {
   const pageNumbers: number[] = [];
   const selectItems: number[] = [12, 24, 48];
 
-  for (let i = 1; i <= Math.ceil(allEmoji.length / emojiPerPage); i++) {
+  for (let i = 1; i <= maxIndex; i++) {
     pageNumbers.push(i);
   }
 
   return (
     <>
       <div className={s.nav}>
-        <button
-          className={`${s.button} ${s.inactive}`}
-          onClick={() => pageChoose(pageNumbers[pageNumbers[0] - 1])}
-        >
-          First
-        </button>
+        {currentPage === 1 ? (
+          <button
+            disabled
+            className={`${s.button} ${s.inactive}`}
+            onClick={() => pageChoose(pageNumbers[pageNumbers[0] - 1])}
+          >
+            First
+          </button>
+        ) : (
+          <button
+            className={`${s.button} ${s.inactive} ${s.buttonhover}`}
+            onClick={() => pageChoose(pageNumbers[pageNumbers[0] - 1])}
+          >
+            First
+          </button>
+        )}
         {pageNumbers.slice(startPage, endPage).map((number) => (
           <button
-            className={s.button}
+            className={
+              currentPage === number
+                ? `${s.button} ${s.buttonhover} ${s.active}`
+                : `${s.button} ${s.buttonhover}`
+            }
             key={number}
             onClick={() => pageChoose(number)}
           >
             {number}
           </button>
         ))}
-        <button
-          className={`${s.button} ${s.inactive}`}
-          onClick={() => pageChoose(pageNumbers.length)}
-        >
-          last
-        </button>
+        {currentPage === 152 || currentPage === 76 || currentPage === 38 ? (
+          <button
+            disabled
+            className={`${s.button} ${s.inactive}`}
+            onClick={() => pageChoose(pageNumbers.length)}
+          >
+            Last
+          </button>
+        ) : (
+          <button
+            className={`${s.button} ${s.inactive} ${s.buttonhover}`}
+            onClick={() => pageChoose(pageNumbers.length)}
+          >
+            Last
+          </button>
+        )}
       </div>
-      <div className={s.nav}>
-        <p>Per pgae</p>
-        <select className={s.select} onChange={selectPerPage}>
+      <div className={s.drop}>
+        <p>Per page</p>
+        <select
+          className={s.select}
+          onChange={({ target }) => selectPerPage(+target.value)}
+        >
           {selectItems.map((number, index) => (
             <option key={index} value={number}>
               {number}

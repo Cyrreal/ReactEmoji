@@ -1,19 +1,18 @@
-.searchBar{
-    display:flex;
-    justify-content: center;
-    position: relative;
-    top:-35px;
+.search {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -35px;
 }
 
-.input{
-
-font-size: 24px;
-font-weight: 400;
-line-height: 21px;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-    padding:22px;
-    max-width: 820px;
-    height: 64px;
-    width: 100%;
+.input {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 21px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 22px;
+  max-width: 820px;
+  height: 64px;
+  width: 100%;
 }

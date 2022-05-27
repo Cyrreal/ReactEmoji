@@ -1,23 +1,10 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'inter', sans-serif;
+  font-family: "inter", sans-serif;
 }
 
-body{
-  background-color: #DEE2E6;
+body {
+  background-color: #dee2e6;
 }
-
-.wrapper{
-  margin: 0 auto;
-  justify-content: center;
-  max-width: 1000px;
-  display:grid;
-  grid-template-columns: 32% 32% 32%;
-  gap: 20px 20px;
-}
-
-
-
-

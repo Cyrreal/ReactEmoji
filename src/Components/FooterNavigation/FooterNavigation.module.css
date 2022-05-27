@@ -1,49 +1,39 @@
-.nav{   
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-    display: flex;
-    justify-content: space-between;
-    
-    }
-
-.button{
-    color:#055160;
-    border: 1px solid #DEE2E6;
-    padding: 12px 14px;
+.nav {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.inactive{
-    color:#ABB5BE;
+.button {
+  color: #055160;
+  border: 1px solid #dee2e6;
+  padding: 12px 14px;
+}
+.buttonhover:hover {
+  cursor: pointer;
+  background-color: #055160;
+  color: #fff;
+  transform: scale(1.1);
+}
+.active {
+  background-color: #055160;
+  color: #fff;
+  transform: scale(1.1);
+}
+.inactive {
+  color: #abb5be;
 }
 
-.button:hover{
-    cursor: pointer;
-    background-color: #055160;
-    color:#fff;
-    transform: scale(1.1)
+.drop {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
-
-.select{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.select {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 9px 15px;
+  width: 120px;
 }
-
-.select-text{
-    color:#000;
-}
-
-.select{
-
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-    padding: 9px 15px;
-    width: 120px;
-}
-
-/* .footer-select select:after{
-    color:gray;
-    content: url(../img/Vector.svg);
-    padding-right: 17px;
-} */

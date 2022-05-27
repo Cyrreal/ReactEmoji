@@ -1,16 +1,18 @@
-import { Cards } from "../Cards";
-import { EmojiType } from "../../App";
+import s from "./Main.module.css";
+
+import { Card } from "../Cards";
+import type { Emoji } from "../../App";
 
 type Props = {
-  currentEmoji: EmojiType;
+  emojiList: Emoji[];
 };
 
-export function Main({ currentEmoji }: Props) {
+export function Main({ emojiList }: Props) {
   return (
     <main>
-      <div className="wrapper">
-        {currentEmoji.map((elem) => (
-          <Cards {...elem} key={elem.title} />
+      <div className={s.wrapper}>
+        {emojiList.map((elem) => (
+          <Card {...elem} key={elem.title} />
         ))}
       </div>
     </main>
