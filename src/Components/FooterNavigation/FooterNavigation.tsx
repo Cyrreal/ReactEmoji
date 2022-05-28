@@ -59,7 +59,7 @@ export function FooterNavigation({
             {number}
           </button>
         ))}
-        {currentPage === 152 || currentPage === 76 || currentPage === 38 ? (
+        {currentPage === maxIndex ? (
           <button
             disabled
             className={`${s.button} ${s.inactive}`}
