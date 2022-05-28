@@ -11,7 +11,7 @@
   border: 1px solid #dee2e6;
   padding: 12px 14px;
 }
-.buttonhover:hover {
+.hover:hover {
   cursor: pointer;
   background-color: #055160;
   color: #fff;

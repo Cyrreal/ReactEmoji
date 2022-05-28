@@ -1,7 +1,6 @@
-import s from "./Main.module.css";
-
-import { Card } from "../Cards";
 import type { Emoji } from "../../App";
+import { Card } from "../Cards";
+import s from "./Main.module.css";
 
 type Props = {
   emojiList: Emoji[];

@@ -1,6 +1,6 @@
-import s from "./Footer.module.css";
-import { FooterNavigation } from "../FooterNavigation";
 import type { Emoji } from "../../App";
+import { FooterNavigation } from "../FooterNavigation";
+import s from "./Footer.module.css";
 
 type Props = {
   emojiPerPage: number;

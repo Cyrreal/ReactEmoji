@@ -1,5 +1,6 @@
-import s from "./Cards.module.css";
 import type { Emoji } from "../../App";
+import s from "./Cards.module.css";
+
 type Props = Emoji;
 export function Card({ symbol, keywords, title }: Props) {
   return (

@@ -1,5 +1,5 @@
-import s from "./FooterNavigation.module.css";
 import type { Emoji } from "../../App";
+import s from "./FooterNavigation.module.css";
 
 type Props = {
   maxIndex: number;
@@ -32,7 +32,7 @@ export function FooterNavigation({
       <div className={s.nav}>
         {currentPage === 1 ? (
           <button
-            disabled
+            disabled={true}
             className={`${s.button} ${s.inactive}`}
             onClick={() => pageChoose(pageNumbers[pageNumbers[0] - 1])}
           >
@@ -40,7 +40,7 @@ export function FooterNavigation({
           </button>
         ) : (
           <button
-            className={`${s.button} ${s.inactive} ${s.buttonhover}`}
+            className={`${s.button} ${s.inactive} ${s.hover}`}
             onClick={() => pageChoose(pageNumbers[pageNumbers[0] - 1])}
           >
             First
@@ -50,8 +50,8 @@ export function FooterNavigation({
           <button
             className={
               currentPage === number
-                ? `${s.button} ${s.buttonhover} ${s.active}`
-                : `${s.button} ${s.buttonhover}`
+                ? `${s.button} ${s.hover} ${s.active}`
+                : `${s.button} ${s.hover}`
             }
             key={number}
             onClick={() => pageChoose(number)}
@@ -61,7 +61,7 @@ export function FooterNavigation({
         ))}
         {currentPage === maxIndex ? (
           <button
-            disabled
+            disabled={true}
             className={`${s.button} ${s.inactive}`}
             onClick={() => pageChoose(pageNumbers.length)}
           >
@@ -69,7 +69,7 @@ export function FooterNavigation({
           </button>
         ) : (
           <button
-            className={`${s.button} ${s.inactive} ${s.buttonhover}`}
+            className={`${s.button} ${s.inactive} ${s.hover}`}
             onClick={() => pageChoose(pageNumbers.length)}
           >
             Last
