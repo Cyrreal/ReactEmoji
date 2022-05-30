@@ -21,22 +21,22 @@ export function Footer({
   let endPage = 0;
 
   //Если при нахождении на последней странице переключается количество отображаемых элементов на странице
-  if (
-    (emojiPerPage === 24 && currentPage === 152) ||
-    (emojiPerPage === 48 && currentPage === 76)
-    //для перехода с 12 на 24 и 48
-  ) {
-    pageChoose(currentPage / 2);
-  } else if (emojiPerPage === 48 && currentPage === 152) {
-    pageChoose(currentPage / 4);
-  } else if (
-    (emojiPerPage === 12 && currentPage === 76) ||
-    (emojiPerPage === 24 && currentPage === 38)
-  ) {
-    pageChoose(currentPage * 2);
-  } else if (emojiPerPage === 12 && currentPage === 38) {
-    pageChoose(currentPage * 4);
-  }
+  // if (
+  //   (emojiPerPage === 24 && currentPage === 152) ||
+  //   (emojiPerPage === 48 && currentPage === 76)
+  //   //для перехода с 12 на 24 и 48
+  // ) {
+  //   pageChoose(currentPage / 2);
+  // } else if (emojiPerPage === 48 && currentPage === 152) {
+  //   pageChoose(currentPage / 4);
+  // } else if (
+  //   (emojiPerPage === 12 && currentPage === 76) ||
+  //   (emojiPerPage === 24 && currentPage === 38)
+  // ) {
+  //   pageChoose(currentPage * 2);
+  // } else if (emojiPerPage === 12 && currentPage === 38) {
+  //   pageChoose(currentPage * 4);
+  // }
 
   if (currentPage === 1 || currentPage === 2) {
     startPage = 0;

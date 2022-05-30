@@ -1,7 +1,7 @@
 import type { Emoji } from "./App";
 
 //Функция для удаления дубликатов из поля keywords
-export function RemoveDuplicates(data: Emoji[]) {
+export function removeDuplicates(data: Emoji[]) {
   return data.map((elem) => {
     if (elem.keywords) {
       let res = elem.keywords.split(" ");

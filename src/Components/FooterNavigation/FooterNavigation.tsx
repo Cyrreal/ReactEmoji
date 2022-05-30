@@ -80,7 +80,10 @@ export function FooterNavigation({
         <p>Per page</p>
         <select
           className={s.select}
-          onChange={({ target }) => selectPerPage(+target.value)}
+          onChange={({ target }) => {
+            selectPerPage(+target.value);
+            pageChoose(1);
+          }}
         >
           {selectItems.map((number, index) => (
             <option key={index} value={number}>

@@ -11,7 +11,7 @@ export function Search({ search, pageChoose }: Props) {
         placeholder="search ur emoji"
         onChange={({ target }) => {
           pageChoose(1);
-          return search(target.value);
+          search(target.value);
         }}
         type="text"
       />
