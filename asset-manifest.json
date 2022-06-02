@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ReactEmoji/static/css/main.8091b8f8.css",
+    "main.js": "/ReactEmoji/static/js/main.2381f1af.js",
+    "index.html": "/ReactEmoji/index.html",
+    "main.8091b8f8.css.map": "/ReactEmoji/static/css/main.8091b8f8.css.map",
+    "main.2381f1af.js.map": "/ReactEmoji/static/js/main.2381f1af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8091b8f8.css",
+    "static/js/main.2381f1af.js"
+  ]
+}
