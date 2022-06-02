@@ -1,9 +1,17 @@
 import { useEventListenner } from "./UseEventListenner";
-
+import { useState } from "react";
 export function UseOnline() {
-  if (navigator.onLine) {
-    return "online";
-  } else {
-    return "offline";
+  const [network, setNetwork] = useState(navigator.onLine);
+  // const isOnline=()=>{
+  //   if (navigator.onLine) {
+  //     return
+  //   } else {
+  //     return "offline";
+  //   }
+  {
   }
+  // }
+  useEventListenner("online", () => setNetwork(navigator.onLine));
+  useEventListenner("offline", () => setNetwork(navigator.onLine));
+  return network;
 }

@@ -6,6 +6,8 @@ import { UseWindowSize } from "./useWindowSize";
 import { useFetchHook } from "./useFetchHook";
 import { useSearch } from "./useSearch";
 import { usePagination } from "./usePagination";
+import { useEventListenner } from "./UseEventListenner";
+import { UseOnline } from "./UseOnline";
 import "./App.css";
 export type Emoji = {
   keywords: string;
@@ -27,12 +29,11 @@ function App() {
     emojiList,
   } = usePagination(filteredEmoji);
 
-  /////////////////////////////////////////////// ДЗ..
-  // const castomHook = useEventListenner();   //
-  // console.log(castomHook);                  //
-  // const { width, height } = UseWindowSize();//
-  //console.log(width, height);               //
-  //////////////////////////////////////////////
+  // console.log(UseOnline());
+
+  // const castomHook = UseWindowSize();
+  // console.log(castomHook);
+
   return (
     <>
       <Header />

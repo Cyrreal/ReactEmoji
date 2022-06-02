@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Emoji } from "./App";
-export function useSearch(arg: any) {
+export function useSearch(fetchData: Emoji[]) {
   const [searchValue, setSearchValue] = useState("");
   //   const fetchData = useFetchHook();
-  const filteredEmoji: any = arg.filter((elem: any) => {
+  const filteredEmoji: any = fetchData.filter((elem: any) => {
     const fullSearch = searchValue.split(" ");
     return fullSearch.every(
       (word) =>
