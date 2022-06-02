@@ -1,5 +1,5 @@
 {
-
+  "homepage": "https://cyrreal.github.io/ReactEmoji/",
   "name": "emoji",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build docs",
+    "build": "set BUILD_PATH=docs && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
