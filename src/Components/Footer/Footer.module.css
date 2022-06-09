@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #6c757d;
+}
+
+.footer {
+  margin-top: 50px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  border-top: 1px solid #ced4da;
+  align-items: center;
+}
+
+.nav {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+}

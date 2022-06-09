@@ -1,0 +1,24 @@
+.header {
+  background: linear-gradient(92.33deg, #087990 0.12%, #055160 100%);
+  padding: 68px 200px 104px 200px;
+  color: #cff4fc;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 87px;
+}
+
+.subtitle {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 36px;
+}

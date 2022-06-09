@@ -1,0 +1,8 @@
+.wrapper {
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  gap: 20px 20px;
+}
