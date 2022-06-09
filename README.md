@@ -12,3 +12,5 @@
    эмодзи на странице
 
 ### У данного проекта реализована gitHub-page https://cyrreal.github.io/ReactEmoji/ удостоверьтесь в работе приложения сами :)
+
+Ссылка на макет в Figma https://www.figma.com/file/IEKD0HrGYAPdk5CXmRxiTR/Projects?node-id=2615%3A881
